@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Header from "./components/Header.js";
+import "./components/Header.css";
+import "./App.css";
+import "./components/Button.css";
+import Button from "./components/Button.js";
+import data from "./data.json";
+import ToDoList from "./components/ToDoList.js";
+import "./components/todolist.css";
 
 function App() {
+  /* given dummy data in  json file and import here 
+    by using useState change state if task is done then by click on that change state  to gray color and green circle*/
+  const [toDoList, setToDoList] = useState(data);
+  /* handleToggle take id and using map method check click id and update using setstate  by changing color */
+  const handleToggle = (id) => {
+    let mapped = toDoList.map((task) => {
+      return task.id === Number(id)
+        ? { ...task, complete: !task.complete }
+        : { ...task };
+    });
+    setToDoList(mapped);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <ToDoList toDoList={toDoList} handleToggle={handleToggle} />
+
+      <Button />
     </div>
   );
 }
