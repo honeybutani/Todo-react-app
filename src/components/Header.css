@@ -4,10 +4,13 @@
     height:70px;
     align-items:center;
     font-weight: bolder;
-    /* margin: 10px; */
+    margin-right: 15px;
     margin-top: 70px; 
     padding-top: 20px;
     padding: 44px 5px 10px 5px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
   
   }
   .leftheading{
@@ -15,6 +18,10 @@
     align-items:center;
     padding: 7px;
     margin: 6px;
+    margin-left :10px; ;
+    position: sticky;
+    top: 0;
+    z-index: 2;
   }
   .monthwrapper{
     display: flex;
@@ -24,16 +31,28 @@
     margin: 0;
     align-items:center;
     font-size:16px ;
+    position: sticky;
+    top: 0;
+    z-index: 0;
     
   }
   .datewrapper{
     font-size:55px;
     margin-right: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 0;
   }
   
   .month{
     padding-bottom: -6px;
+    position: sticky;
+    top: 0;
+    z-index: 0;
   }
   .year{
     padding-top: 2px;
+    position: sticky;
+    top: 0;
+    z-index: 0;
   }

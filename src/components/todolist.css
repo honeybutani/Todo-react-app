@@ -3,4 +3,12 @@
   margin: 30px;
   font-size: 22px;
   line-height: 1.9em;
+  height:400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+}
+
+.todolist::-webkit-scrollbar{
+display: none
 }

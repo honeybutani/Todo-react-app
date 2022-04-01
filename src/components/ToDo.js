@@ -13,6 +13,7 @@ export default function ToDo({ todo, handleToggle }) {
       className={todo.complete ? " todo strike" : "todo"}
     >
       {todo.task}
+
       <i
         className={
           todo.complete
